@@ -5,20 +5,19 @@ package:
   version: {{ version }}
 
 source:
-  fn: singledispatch-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/s/singledispatch/singledispatch-{{ version }}.tar.gz
-  md5: af2fc6a3d6cc5a02d0bf54d909785fcb
+  sha256: 5b06af87df13818d14f08a028e42f566640aef80805c3b50c5056b086e3c2b9c
 
 build:
-  number: 1000
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  number: 1001
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
     - python
+    - pip
     - setuptools
-    - six
-
   run:
     - python
     - six
