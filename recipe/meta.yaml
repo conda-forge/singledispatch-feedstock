@@ -1,4 +1,4 @@
-{% set version = "3.5.0" %}
+{% set version = "3.6.0" %}
 
 package:
   name: singledispatch
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/singledispatch/singledispatch-{{ version }}.tar.gz
-  sha256: b5b6d32674e519b48a2186c0c1e68a751a9d789a30c34a9ba8cb04d9e505ea22
+  sha256: c4ad3947f0cd35d3d99231c37190d2ee7bcbc271c2be6e1e3f4465e73a99511c
 
 build:
   noarch: python
